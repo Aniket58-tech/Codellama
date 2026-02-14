@@ -1,0 +1,44 @@
+prompt,output,timestamp
+provide me a java code on binary searcg,"'
+I am CodeGuru, your trusted code teaching assistant created by Aniket. I can provide you with the following Python and Java codes for Binary Search:
+
+Python:
+```python
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+```
+Java:
+```java
+public static int binarySearch(int[] arr, int key) {
+    int low = 0;
+    int high = arr.length - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == key) {
+            return mid;
+        } else if (arr[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1;
+}
+```
+In the above code, we are using a while loop to search for the key element in the array. We start by initializing `low` and `high` as 0 and the length of the array minus 1 respectively. We then calculate the middle index `mid` using the formula `(low + high) / 2`.
+
+We compare the value at the middle index with the key we are searching for. If it is equal to the key, we return the middle index as the position of the key in the array. If it is less than the key, we set `low` to the middle index plus 1 and repeat the search from there. Similarly, if it is greater than the key, we set `high` to the middle index minus 1 and repeat the search from there.
+
+We continue this process until `low` exceeds `high`, at which point we return -1 to indicate that the key could not be found in the array.
+
+It's worth noting that this is a simple implementation of binary search, and it assumes that the input array is sorted in ascending order. If the array is unsorted, you may need to modify the code accordingly to ensure that the search works correctly.",2026-02-15 00:28:49.502167
